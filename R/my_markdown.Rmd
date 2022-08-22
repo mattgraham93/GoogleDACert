@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+author: "Matt Graham"
+date: "2022/08/20"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r ggplot for penguin data}
+library(ggplot2)
+library(palmerpenguins)
+data(penguins)
+View(penguins)
+```
+
+```{r ggplot for penguin data visualiztaion}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g))
+```
